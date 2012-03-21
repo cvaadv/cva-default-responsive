@@ -1,0 +1,241 @@
+/////////////////////////////////////////////////////////////////////
+//   ---------   ||||   >>>>      IMPORTS     <<<<   ||||   ----   //
+/////////////////////////////////////////////////////////////////////
+
+@import 'reset.less';
+@import 'grid.less';
+@import 'print.less';
+@import 'helpers.less';
+
+/*=================================================================*/
+
+/////////////////////////////////////////////////////////////////////
+//   ---------   ||||   >>>>       GRID       <<<<   ||||   ----   //
+/////////////////////////////////////////////////////////////////////
+
+// Specify the number of columns and set column and gutter widths
+@columns: 12;
+@column-width: 60;
+@gutter-width: 20;
+
+// Remove the definition below for a pixel-based layout
+@total-width: 100%;
+
+/*=================================================================*/
+
+/////////////////////////////////////////////////////////////////////
+//   ---------   ||||   >>>>      LAYOUT      <<<<   ||||   ----   //
+/////////////////////////////////////////////////////////////////////
+
+/*------------------------------
+        HEADER
+------------------------------*/
+header#top {
+	margin-bottom: 1em;
+	.column(12);
+}
+
+/*------------------------------
+        NAVIGATION
+------------------------------*/
+nav {
+	margin-bottom: 1em;
+	.column(12);
+	
+	ul li {
+		float: left;		
+		
+		a {
+			display: block;
+			margin-right: 20px;
+			width: 140px;
+			font-size: 14px;
+			line-height: 44px;
+			text-align: center;
+			text-decoration: none;
+			color: #777;
+		}
+		
+		a:hover {
+			color: #FFF;
+		}
+	
+	}
+	
+	ul li.selected a {
+		color: white;
+	}
+		
+}
+	
+/*------------------------------
+        MAIN AND SIDEBAR
+------------------------------*/
+#maincolumn {
+	.column(9);
+}
+#sidebar {
+	.column(3);
+}
+
+/*------------------------------
+        FOOTER
+------------------------------*/
+footer#bottom {
+	margin-bottom: 1em;
+	.column(12);
+	
+	section {
+		.column(4,12);
+	}
+}
+
+/*=================================================================*/
+
+/////////////////////////////////////////////////////////////////////
+//   ---------   ||||   >>>>   BASIC STYLES   <<<<   ||||   ----   //
+/////////////////////////////////////////////////////////////////////
+
+/*------------------------------
+        TYPOGRAPHY
+------------------------------*/
+h1 {
+	font-size: 2em;
+}
+
+h1 a {
+	text-decoration: none;
+}
+
+h2 {
+	font-size: 1.5em;
+	color: #000;
+}
+
+a, a:visited, a:hover, a:active {
+	color:blue;
+}
+
+/*------------------------------
+        HEADER
+------------------------------*/
+header#top {
+	h1 {
+		color: #000;
+	}
+}
+
+/*------------------------------
+        NAVIGATION
+------------------------------*/
+nav {
+	font-size: 1.25em;
+	background-color:#000;
+	
+	a:visited{
+		color:#777;
+	}
+	
+	a:hover {
+		background-color:#777;
+	}
+}
+
+/*------------------------------
+        MAIN AND SIDEBAR
+------------------------------*/
+section#sidebar {
+	background-color:lemonChiffon;
+	.border-radius(15px);
+	margin-top: 5px;
+	margin-bottom: 5px;
+	
+	h2, p {
+		margin:10px;
+	}
+}
+	
+/*------------------------------
+        FOOTER
+------------------------------*/
+footer#bottom {
+	background-color:#222;
+	font-size: .90em;
+	
+	h3 {
+		color:#FFF;
+	}
+	p {
+		color:#777;
+	}
+	a {
+		color:#999;
+	}
+	a:hover {
+		color:#FFF;
+	}
+	header {
+		padding-top:5px;
+		padding-bottom:5px;
+	}
+	ul {
+		padding-left:5px;
+		padding-bottom:0px;
+		padding-top:0px;
+		margin: 0px;
+	}
+}
+
+/*=================================================================*/
+
+//////////////////////////////////////////////////////////////////////
+//   ---------   ||||   >>>>   MEDIA QUERIES   <<<<   ||||   ----   //
+//////////////////////////////////////////////////////////////////////
+
+@media screen and (max-width: 720px) {
+	
+	/*------------------------------
+	        NAVIGATION
+	------------------------------*/
+	nav ul li {
+		float: none;
+		width:100%;
+		text-align:center;
+		
+		a {
+			line-height: 24px;
+			width:100%;
+		}
+	}
+	
+	/*------------------------------
+	        MAIN AND SIDEBAR
+	------------------------------*/
+	#maincolumn,
+	#sidebar {
+		.column(12);
+		margin-bottom: 1em;
+	}
+	
+	section#sidebar {
+		background-color:#FFF;
+		.border-radius(0px);
+		margin-top: 0px;
+		margin-bottom: 10px;
+
+		h2, p {
+			margin:0px;
+		}
+	}
+	
+	/*------------------------------
+	        FOOTER
+	------------------------------*/
+	footer#bottom {
+		section {
+			.column(12);
+		}
+	}
+}
+
+
