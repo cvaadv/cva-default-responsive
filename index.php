@@ -29,21 +29,22 @@ $app = JFactory::getApplication();
 </head>
 <body>
 <!--[if lt IE 7]><p class=chromeframe>Your web browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
+	<jdoc:include type="component" />
 
 	<!-- Header -->
 	<header id="top">
 		<h1><?php echo $app->getCfg('sitename'); ?></h1>
-		<?php if($this->countModules('atomic-search')) : ?>
+		<?php if($this->countModules('cva-search')) : ?>
 			<div class="joomla-search span-7 last">
-  	 			<jdoc:include type="modules" name="atomic-search" style="none" />
+  	 			<jdoc:include type="modules" name="cva-search" style="none" />
 			</div>
 		<?php endif; ?>
 	</header> <!-- end Header -->
 	
 	<!-- Navigation -->
 	<nav>
-		<?php if($this->countModules('atomic-topmenu')) : ?>
-			<jdoc:include type="modules" name="atomic-topmenu" style="container" />
+		<?php if($this->countModules('cva-topmenu')) : ?>
+			<jdoc:include type="modules" name="cva-topmenu" style="container" />
 		<?php endif; ?>
 	</nav> <!-- end Navigation -->
 
@@ -57,9 +58,9 @@ $app = JFactory::getApplication();
 
 	<!-- Sidebar -->
 	<section id="sidebar">
-		<?php if($this->countModules('atomic-sidebar')) : ?>
+		<?php if($this->countModules('cva-sidebar')) : ?>
 			<div class="span-7 last">
-        		<jdoc:include type="modules" name="atomic-sidebar" style="sidebar" />
+        		<jdoc:include type="modules" name="cva-sidebar" style="sidebar" />
 			</div>
 		<?php endif; ?>
 	</section> <!-- end Sidebar -->
@@ -104,9 +105,9 @@ $app = JFactory::getApplication();
 	</footer> <!-- end Footer -->
 
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-	<script>window.jQuery || document.write('<script src="cva-libs/js/jquery-1.7.1.min.js"><\/script>')</script>
-	<script src="cva-libs/js/plugins.js"></script>
-	<script src="cva-libs/js/script.js"></script>
+	<script>window.jQuery || document.write('<script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/cva-libs/js/jquery-1.7.1.min.js"><\/script>')</script>
+	<script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/cva-libs/js/plugins.js"></script>
+	<script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/cva-libs/js/script.js"></script>
 	<script>
 		var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
 		(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
