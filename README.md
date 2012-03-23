@@ -1,9 +1,9 @@
-CVA Default Responsive Semantic Web Template for Joomla
+CVA Default Responsive Semantic Web Template
 ============================================
 
 *View the [demo](http://customers.cvaadv.com/cva-default-responsive/).*
 
-Baseline HTML5/CSS3 responsive template based on [Semantic Grid](http://semantic.gs) for Joomla 1.7+.
+Baseline HTML5/CSS3 responsive template based on [Semantic Grid](http://semantic.gs) 1.7+.
 
 Includes:
 
