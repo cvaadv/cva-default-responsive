@@ -1,0 +1,3 @@
+[submodule "cva-libs"]
+	path = cva-libs
+	url = git@github.com:cvaadv/cva-libs.git
