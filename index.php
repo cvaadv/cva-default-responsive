@@ -3,27 +3,11 @@
 	<!-- Main Body -->
 	<article id="maincolumn">
 		<?php
-
-		// The Query
-
-		$the_query = new WP_Query( 'post_type=post&posts_per_page=8' );
-
-		// The Loop
-
-		while ( $the_query->have_posts() ) : $the_query->the_post();
-
-		echo '<li><a href="'; the_permalink(); echo'">';
-
-		the_post_thumbnail();
-
-		echo '</a></li>';
-
-		endwhile;
-
-		// Reset Post Data
-
-		wp_reset_postdata();
-
+		/* Run the loop to output the posts.
+		 * If you want to overload this in a child theme then include a file
+		 * called loop-index.php and that will be used instead.
+		 */
+		 get_template_part( 'loop', 'index' );
 		?>
 	</article> <!-- end Main Body -->
 
