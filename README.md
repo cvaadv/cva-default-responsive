@@ -1,9 +1,9 @@
-CVA Default Responsive Semantic Web Template
+CVA Default Responsive Semantic Web Template for Wordpress
 ============================================
 
 *View the [demo](http://customers.cvaadv.com/cva-default-responsive/).*
 
-Baseline HTML5/CSS3 responsive template based on [Semantic Grid](http://semantic.gs).
+Baseline HTML5/CSS3 responsive template based on [Semantic Grid](http://semantic.gs). This is a branch for Wordpress templates.
 
 Includes:
 
