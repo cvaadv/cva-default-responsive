@@ -15,9 +15,9 @@
 	<link rel="profile" href="http://gmpg.org/xfn/11" />
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 
-	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/css/style.css" type="text/css" media="screen">
 
-	<script src="cva-libs/js/modernizr-2.5.3-respond-1.1.0.min.js"></script>
+	<script src="<?php bloginfo( 'template_url' ); ?>/cva-libs/js/modernizr-2.5.3-respond-1.1.0.min.js"></script>
 	<!--[if lt IE 9]><script type="text/javascript" src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
 	<?php
